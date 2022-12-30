@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Form Page</title>
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["phoneno"].value;
+            let y = x.length;
+            if (y != 10) {
+                alert("Phone no. not valid");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Verification Form</h1>
+<form name="myForm" onsubmit="return validateForm()" method="post">
+
+    <label for="fname">Name:</label><br>
+    <input type="text" id="fname" name="fname"><br><br>
+
+    <label for="phoneno">Phone No.:</label><br>
+    <input type="tel" id="phoneno" name="phoneno"><br><br>
+
+    <label for="email">Email Id:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="regno">Registration No.:</label><br>
+    <input type="text" id="regno" name="regno"><br><br>
+
+    <label for="gender">Gender:</label><br>
+    <input type="radio" name="gender">Male<br>
+    <input type="radio" name="gender">Female<br>
+    <input type="radio" name="gender">Others<br><br>
+
+    <label>City:</label><br>
+    <input list="city">
+         <datalist id="city">
+             <option value="-Select">
+             <option value="Hyderabad">
+             <option value="Mumbai">
+             <option value="Bhopal">
+             <option value="Delhi">
+         </datalist><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
