@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reversing The String</title>
+        <style>
+            body{
+                background-image: url('qwerty.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            h1{
+                font-style: italic;
+                font-size: 40px;
+                color: aliceblue;
+                text-align: center;
+            }
+            p1{
+                font-style: italic;
+                font-size: 30px;
+                color: whitesmoke;
+            }
+
+        </style>
+        <script>
+            function revString(){
+                let x=""; //vitbhopal
+                let y=document["game"]["str"].value;
+                for(let i=0; i<y.length; i++){
+                    x=y[i]+x;
+                }
+                document.write("Reversed String is: "+x);
+                document.write("<br>");
+                if(x==y){
+                    document.write("Palindrome");
+                }
+                else{
+                    document.write("Not Palindrome");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Reverse The String</h1>
+        <p1>This program generates the reverse of the string.<br><br>
+        Enter your string: </p1><br><br>
+        <form name="game" onsubmit="return revString()" method="post">
+            <label for="str"></label><br>
+            <input type="text" id="str" name="str"><br><br>
+            <input type="submit" value="Enter">
+        </form>
+    </body>
+</html>>
+<head>
