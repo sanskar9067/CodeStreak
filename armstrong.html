@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Armstrong</title>
+        <style>
+            h1{
+                text-align: center;
+            }
+        </style>
+        <script>
+            function calcarmstrong(){
+                let x = document["arms"]["num"].value;
+                let y = x.length;
+                let res=0;
+                for(let i=0; i<y; i++){    
+                    let a = Math.pow(x[i],y)   //153=1^3+5^3+3^3
+                    res = res+a;
+                }
+                document.write("Entered Number: "+x+"<br>");
+                document.write("After Operation: "+res+"<br>");
+                if(res==x){
+                    document.write("Armstrong Number");
+                }
+                else{
+                    document.write("Not an Armstrong Number");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Armstrong</h1>
+        <p>This programs checks whether a number is an armstrong number or not.</p><br>
+        <form name="arms" onsubmit="return calcarmstrong()" method="post">
+            <label for="num">Enter the Number:</label><br>
+            <input type="tel" id="num" name="num"><br><br>
+            <input type="submit" value="Enter">
+        </form>
+    </body>
+</html>
