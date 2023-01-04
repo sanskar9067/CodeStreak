@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function jsFun()
+{
+  var val, elem, at;
+  at = Math.floor(Math.random()*100);
+  console.log(at);
+  val = parseInt(document.getElementById("num").value);
+  if(val)
+  {
+    if(val<at)
+      document.getElementById("paraTwo").innerHTML = "Too less!!";
+    if(val>at)
+      document.getElementById("paraTwo").innerHTML = "Too high!!";
+    else{
+        document.getElementById("paraTwo").innerHTML = "You have guessed it!!";
+    }
+  }
+}
+</script>
+</head>
+<body>
+    <h1>Guess The Number</h1>
+    <p>This programs generates a number between 1 and 100 and you have to guess it.</p><br>
+<p id="paraOne">Enter a Number: <input id="num">
+<button onclick="jsFun()">Enter</button></p>
+<p id="paraTwo"></p>
+
+</body>
+</html>
