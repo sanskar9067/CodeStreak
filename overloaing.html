@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Overloading</title>
+    <script>
+        function sum(){
+            if (arguments.length == 0){
+                console.log("No argumnets");
+            }
+            
+            else if (arguments.length == 1){
+                console.log("1 arguments");
+            }
+
+            else{
+                let res = 0;
+                for(let i=0; i < arguments.length; i++){
+                    res = res + arguments[i];
+                }
+                console.log(res);
+            }
+        }
+        sum();
+        sum(9);
+        sum(32,54);
+        sum(54,534,366,346,324,564,666)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
