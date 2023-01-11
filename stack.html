@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+    <script>
+        class Stack{
+            constructor() {
+                this.stack = [];
+            }
+            add(element){
+                this.stack.push(element);
+            }
+            view(){
+                for(let i=0; i<this.stack.length; i++){
+                    console.log(this.stack[i]+" ");
+                }
+            }
+            remove(){
+                if(this.stack.length > 0){
+                    this.stack.pop();
+                }
+            }
+            peek(){
+                console.log(this.stack[this.stack.length - 1]);
+            }
+            size(){
+                console.log(this.stack.length);
+            }
+        }
+        let s1 = new Stack();
+        s1.add(5);
+        s1.add(7);
+        s1.add(8);
+        s1.view();
+        s1.peek();
+        s1.remove();
+        s1.size();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
