@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <script src="" async defer>
+            function intersectionArray(arr1,arr2){
+                let x = arr1.length;
+                let y = arr2.length;
+                let res = [];
+
+                for(let i=0; i<x; i++){
+                    for(let j=0; j<y; j++){
+                        if(arr1[i]==arr2[j]){
+                            res.push(arr1[i]);
+                        }
+                    }
+                }
+                cosnsole.log(res);
+            }
+            const arr1 = [1,2,3,4,5];
+            const arr2 = [3,4,5,6,7];
+            intersectionArray(arr1,arr2);
+        </script>
+    </body>
+</html>
