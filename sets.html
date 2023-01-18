@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets Operations</title>
+    <script>
+        function union(a, b) {
+            let unionSet = new Set(a);
+            for (let i of b) {
+                unionSet.add(i);
+            }
+            return unionSet
+        }
+        function intersection(setA, setB) {
+            let intersectionSet = new Set();
+
+            for (let i of setB) {
+                if (setA.has(i)) {
+                    intersectionSet.add(i);
+                }
+            }
+            return intersectionSet;
+        }
+        function difference(setA, setB) {
+            let differenceSet = new Set(setA)
+            for (let i of setB) {
+                differenceSet.delete(i)
+            }
+            return differenceSet
+        }
+        const setA = new Set(['x', 'y', 'z']);
+        const setB = new Set(['a', 'x', 'b']);
+        const result = union(setA, setB);
+        console.log(result);
+        const result1 = intersection(setA, setB);
+        console.log(result1);
+        const result2 = difference(setA, setB);
+        console.log(result2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
